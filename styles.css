@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  flex-direction: column;
+  position: relative;
+  box-sizing: content-box;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  top: 0;
+  z-index: -1;
+}
+.left {
+  width: 50%;
+  height: 100%;
+  padding: 0px;
+  background-color: #fdcfe1;
+  overflow: hidden;
+}
+.info {
+  top: 30%;
+  position: relative;
+  width: 80%;
+  margin: 10%;
+}
+
+.info h1 {
+  font-size: 36;
+}
+@media only screen and (max-width: 1100px) {
+  .info h1 {
+    font-size: 30;
+  }
+}
+@media only screen and (max-height: 600px) {
+  .row {
+    overflow: auto;
+    position: fixed;
+  }
+}
+.right {
+  width: 50%;
+  height: 100%;
+  padding: 0px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  .right,
+  .left {
+    width: 100%;
+  }
+  .left {
+    float: bottom;
+  }
+  .row {
+    display: flex;
+    flex-direction: column-reverse;
+
+    position: relative;
+    direction: ltr;
+  }
+}
+
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.annotation {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding-left: 15%;
+  position: absolute;
+  bottom: 8px;
+  top: 70%;
+  width: 40%;
+  transform: translateY(-30%);
+}
+
+.text h2 {
+  color: #f2f2f2;
+  font-size: 20px;
+  position: relative;
+  text-align: Left;
+  bottom: 8px;
+}
+.text p {
+  color: #f2f2f2;
+  font-size: 12px;
+
+  position: relative;
+  bottom: 8px;
+}
+
+/* The dots/bullets/indicators */
+
+.dot {
+  height: 7px;
+  width: 7px;
+
+  position: relative;
+  border-radius: 100%;
+  border-width: 30px;
+  display: inline-block;
+
+  background-color: #8b8a8a;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #ffffff;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  color: rgb(19, 18, 18);
+  letter-spacing: 5px;
+  font-size: 20px;
+  width: 65%;
+}
+.logo img {
+  padding-left: 5%;
+  width: 25%;
+  height: auto;
+}
+.nav-links {
+  display: flex;
+
+  justify-content: space-around;
+  width: 25%;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  color: rgb(255, 255, 255);
+  float: right;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 12px;
+}
+.nav-res {
+  display: none;
+}
+.nav-res div {
+  width: 25px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+}
+@media screen and (max-width: 1100px) {
+  .nav-links a {
+    font-size: 10px;
+    letter-spacing: 0px;
+  }
+  .nav-links {
+    width: 35%;
+  }
+  .logo {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-shrink: 0;
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  justify-content: space-around;
+  height: 10%;
+  overflow: hidden;
+  width: 100%;
+}
+.store {
+  color: rgb(19, 18, 18);
+  width: 50%;
+  padding-right: 15%;
+  justify-content: space-around;
+  display: flex;
+}
+.store li {
+  list-style: none;
+}
+.store img {
+  width: 100%;
+}
+.soc-med {
+  color: rgb(19, 18, 18);
+  width: 50%;
+  padding-left: 32%;
+  justify-content: space-around;
+  display: flex;
+  position: relative;
+  bottom: 0;
+}
+.soc-med li {
+  list-style: none;
+}
+
+.soc-med img {
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+}
+@media screen and (max-width: 1100px) {
+  .store {
+    padding-right: 8%;
+  }
+  .footer {
+    bottom: 3%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .store {
+    padding-right: 0%;
+  }
+  .soc-med {
+    padding-left: 25%;
+  }
+  .footer {
+    bottom: 0%;
+  }
+}
